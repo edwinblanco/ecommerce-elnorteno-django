@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'telecomunicaciones_app',
     'usuarios_app',
     'phonenumber_field',
+    'import_export',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -126,7 +128,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR /'static'
 STATICFILES_DIRS = [
-    'elnortenoproject/static/'
+    BASE_DIR / 'elnortenoproject/static/',
+    BASE_DIR / 'elnortenoproject/static/teleco/images/banners/',
 ]
 
 MEDIA_URL = '/media/'

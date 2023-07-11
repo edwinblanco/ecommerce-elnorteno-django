@@ -1,106 +1,79 @@
 {% load static %}
 
 <header class="section-header">
-  <nav class="navbar p-md-0 navbar-expand-sm navbar-light border-bottom">
-    <div class="container">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarTop4"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTop4">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link"> Espanol </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link"> USD </a>
-          </li>
-        </ul>
-        <ul class="navbar-nav">
-          <li>
-            <a href="#" class="nav-link">
-              <i class="fa fa-envelope"></i> Email
-            </a>
-          </li>
-          <li>
-            <a href="#" class="nav-link">
-              <i class="fa fa-phone"></i> Llamanos</a
-            >
-          </li>
-        </ul>
-        <!-- list-inline //  -->
-      </div>
-      <!-- navbar-collapse .// -->
-    </div>
-    <!-- container //  -->
-  </nav>
-
-  <section class="header-main border-bottom">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-2 col-md-3 col-6">
-          <a href="./" class="brand-wrap">
-            <img class="logo" src="{% static 'teleco/images/logo01.png' %}" />
-          </a>
-          <!-- brand-wrap.// -->
-        </div>
-        <div class="col-lg col-sm col-md col-6 flex-grow-0">
-          <div class="category-wrap dropdown d-inline-block float-right">
-            <button
-              type="button"
-              class="btn btn-primary dropdown-toggle"
-              data-toggle="dropdown"
-            >
-              <i class="fa fa-bars"></i> Categorias
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Electronica / Tv, Audio </a>
-              <a class="dropdown-item" href="#">Auto / Transporte</a>
-              <a class="dropdown-item" href="#">Ropa Moda / Textiles </a>
-              <a class="dropdown-item" href="#"
-                >Casa & Jardin / Construccion / Luces
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid">
+        <a href="./" class="brand-wrap">
+          <img class="logo" src="{% static 'teleco/images/logo.png' %}" />
+        </a>
+        <button
+          class="navbar-toggler m-1"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown m-1">
+              <a
+                class="btn btn-primary dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa fa-bars"></i> Categorias
               </a>
-              <a class="dropdown-item" href="#">Computadoras / Telefonos </a>
-            </div>
-          </div>
-          <!-- category-wrap.// -->
-        </div>
-        <!-- col.// -->
-        <a href="./store.html" class="btn btn-outline-primary">Tienda</a>
-        <div class="col-lg col-md-6 col-sm-12 col">
-          <form action="#" class="search">
-            <div class="input-group w-100">
-              <input
-                type="text"
-                class="form-control"
-                style="width: 60%"
-                placeholder="Search"
-              />
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="submit">
-                  <i class="fa fa-search"></i>
-                </button>
-              </div>
-            </div>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+              </ul>
+            </li>
+            <li class="nav-item m-1">
+              <a href="./store.html" class="btn btn-outline-primary">Tienda</a>
+            </li>
+            <li class="nav-item m-1 ms-3">
+              <a href="./store.html" class="btn">Contacto</a>
+            </li>
+            <li class="nav-item m-1">
+              <a href="./store.html" class="btn">Sobre nosotros</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Buscar..."
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Buscar
+            </button>
           </form>
-          <!-- search-wrap .end// -->
-        </div>
-        <!-- col.// -->
-        <div class="col-lg-3 col-sm-6 col-8 order-2 order-lg-3">
-          <div class="d-flex justify-content-end mb-3 mb-lg-0">
+          <div class="d-flex justify-content-end m-2 mb-3 mb-lg-0">
             <div class="widget-header">
-              <small class="title text-muted">Bienvenido visitante!</small>
+              <small class="title text-muted">¡Bienvenido, visitante!</small>
               <div>
-                <a href="./signin.html">Login</a>
-                <span class="dark-transp"> | </span>
-                <a href="./register.html"> Registrar</a>
+                <a
+                  href="./signin.html"
+                  class="mr-2"
+                  style="text-decoration: none"
+                  >Login</a
+                >
+                <span class="dark-transp">|</span>
+                <a
+                  href="./register.html"
+                  class="ml-2"
+                  style="text-decoration: none"
+                  >Registrar</a
+                >
               </div>
             </div>
             <a href="./cart.html" class="widget-header pl-3 ml-3">
@@ -110,14 +83,46 @@
               <span class="badge badge-pill badge-danger notify">0</span>
             </a>
           </div>
-          <!-- widgets-wrap.// -->
         </div>
-        <!-- col.// -->
       </div>
-      <!-- row.// -->
-    </div>
-    <!-- container.// -->
-  </section>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <div
+          class="collapse navbar-collapse justify-content-center bg-light"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            {% if marcas %} {% for marca in marcas %}
+            <li class="nav-item">
+              {% if marca.imagen %}
+              <a
+                class="nav-link"
+                href="/{{marca.id}}"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                data-bs-html="true"
+                title="<img src='{{marca.imagen.url}}' alt='Imagen de {{marca.nombre}}' class='tooltip-image'>"
+                >{{ marca.nombre }}</a
+              >
+              {% else %}
+              <a class="nav-link" href="/{{marca.id}}">{{ marca.nombre }}</a>
+              {% endif %}
+            </li>
+            {% endfor %} {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <script>
+    var tooltipTriggerList = [].slice.call(
+      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    );
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+  </script>
   <!-- header-main .// -->
 </header>
 <!-- section-header.// -->

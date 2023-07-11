@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 """class CategoriaTeleco(models.Model):
@@ -95,7 +96,7 @@ class ProductoTeleco(models.Model):
     retiro_en_persona = models.BooleanField(default=False)
     tipo_garantia = models.ForeignKey(TipoGarantiaProductoTeleco, on_delete=models.CASCADE, null=True)
     tiempo_garantia = models.IntegerField()
-    unidad_garantia = models.CharField(max_length=20, unique=True)
+    unidad_garantia = models.CharField(max_length=20)
     imagen = models.ImageField(upload_to='imagenes/productos_teleco', blank=True)
     marca = models.ForeignKey(MarcaProductoTeleco, on_delete=models.CASCADE, null=True)
     modelo = models.CharField(max_length=250)
@@ -134,7 +135,7 @@ class ProductoSwitchTeleco(ProductoTeleco):
     serie = models.CharField(max_length=20)
     tipo_telecomunicacion = models.CharField(max_length=50)
     capacidad_telecomunicacion = models.IntegerField()
-    unidad_capacida_teleco = models.IntegerField()
+    unidad_capacidad_teleco = models.IntegerField()
     es_gestionable = models.BooleanField(default=False)
     
     def __str__(self):
@@ -145,7 +146,7 @@ class ProductoSwitchTeleco(ProductoTeleco):
         verbose_name_plural = ("Productos Switches Telecomunicaciones")
         
 class ProductoOtroTeleco(ProductoTeleco):
-    ficha_tecnica = models.CharField(max_length=2000)
+    ficha_tecnica = RichTextField()
     
     def __str__(self):
         return self.nombre
